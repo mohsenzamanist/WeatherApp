@@ -11,16 +11,16 @@
     <main>
       <section class="search">
         <form id="weather-form" class="weather-form">
-          <img src="img/searchicon.png" alt="Search Icon" />
+          <img src="img/search.png" alt="Search Icon" />
           <input id="city" type="text" placeholder="Search for a city..." />
           <button id="submit-button" disabled>Search</button>
-          <p id="error">Only alphabet characters(a-z, A-Z) and spaces</p>
+          <p id="error"></p>
         </form>
       </section>
-      <section class="general-info">
+      <section id="general-info" class="general-info">
         <div class="overall">
           <div id="name-date" class="name-date">
-            <p>
+            <p class="icon-location">
               <img src="img/location.png" alt="Location Icon" /><span
                 id="city-name"
               ></span>
@@ -32,15 +32,24 @@
             <p id="desc">Mostly cloudy</p>
           </div>
           <div id="details" class="details">
-            <p id="pressure" class="pressure"></p>
-            <p id="humidity" class="humidity"></p>
-            <p id="wind-speed" class="wind-speed"></p>
+            <div>
+              <img src="img/pressure.png" alt="Pressure" />
+              <p id="pressure" class="pressure"></p>
+            </div>
+            <div>
+              <img src="img/humidity.png" alt="Humidity" />
+              <p id="humidity" class="humidity"></p>
+            </div>
+            <div>
+              <img src="img/wind.png" alt="Wind" />
+              <p id="wind-speed" class="wind-speed"></p>
+            </div>
           </div>
         </div>
         <div id="other" class="other">
           <p id="wind-degree">Wind degree: <span></span></p>
-          <p id="temp-max">Maximum temperature: <span></span></p>
-          <p id="temp-min">Minimum temperature: <span></span></p>
+          <p id="temp-max">Max. temperature: <span></span></p>
+          <p id="temp-min">Min. temperature: <span></span></p>
           <p id="feels-like">Feels like: <span></span></p>
           <img id="icon" />
         </div>
