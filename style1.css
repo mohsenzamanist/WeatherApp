@@ -1,0 +1,16 @@
+.wave-gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Allows them to wrap on smaller screens */
+  margin: 20px;
+}
+
+.wave-card {
+  text-align: center;
+  margin: 10px;
+}
+
+canvas {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
