@@ -29,6 +29,21 @@ window.addEventListener("load", () => {
   fetchAndRender(defaultCity);
 });
 
+function removeSkeleton() {
+  cityName.classList.remove("skeleton");
+  date.classList.remove("skeleton");
+  tempDegree.classList.remove("skeleton");
+  desc.classList.remove("skeleton");
+  pressure.classList.remove("skeleton");
+  humidity.classList.remove("skeleton");
+  windSpeed.classList.remove("skeleton");
+  windDegreeSpan.classList.remove("skeleton");
+  maxTempSpan.classList.remove("skeleton");
+  minTempSpan.classList.remove("skeleton");
+  feelsLikeSpan.classList.remove("skeleton");
+  icon.classList.remove("skeleton");
+}
+
 cityInput.addEventListener("keyup", () => {
   if (/^[A-Za-z\s'-]+$/.test(cityInput.value)) {
     errorP.style.visibility = "hidden";
@@ -79,7 +94,7 @@ async function fetchAndRender(city) {
   if (data.cod !== 200) {
     const fallBackUrl = `https://api.openweathermap.org/data/2.5/weather?q=london&appid=${APIKey}&units=metric`;
     const fallBackData = await getWeather(fallBackUrl);
-    errorP.textContent = "City with given name could not be found.";
+    errorP.textContent = "City with the given name could not be found.";
     errorP.style.visibility = "visible";
     render(fallBackData);
   } else {
@@ -96,6 +111,7 @@ async function getWeather(url) {
 }
 
 function render(data) {
+  removeSkeleton();
   const now = new Date();
   cityName.textContent = data.name;
   date.textContent = `${now.toLocaleString("en-us", {
