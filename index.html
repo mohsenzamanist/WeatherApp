@@ -11,10 +11,17 @@
     <main>
       <section class="search">
         <form id="weather-form" class="weather-form">
-          <img src="img/search.png" alt="Search Icon" />
-          <input id="city" type="text" placeholder="Search for a city..." />
-          <button id="submit-button" disabled>Search</button>
-          <p id="error"></p>
+          <div class="form-first-row">
+            <img src="img/search.png" alt="Search Icon" />
+            <input id="city" type="text" placeholder="Search for a city..." />
+            <button id="submit-button" disabled>Search</button>
+          </div>
+          <div class="form-first-row">
+            <p id="error">
+              Only alphabet characters (a-z, A-Z), spaces, hyphens, and
+              apostrophes.
+            </p>
+          </div>
         </form>
       </section>
       <section id="general-info" class="general-info">
