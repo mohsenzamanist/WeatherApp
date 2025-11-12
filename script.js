@@ -88,7 +88,7 @@ function windDirection(deg) {
 }
 
 async function fetchAndRender(city) {
-  const APIKey = "f404cb64a0a4fcd6b8867678cd73a93e";
+  const APIKey = "YOUR_API_KEY_HERE";
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}&units=metric`;
   const data = await getWeather(url);
   if (data.cod !== 200) {
